@@ -1,12 +1,8 @@
 {
   "cardDataBase": [
-    {"name":"Rage Mana", "type":"rage" ,"cost":null, "desc":"A source of fury.", "img_url":"exampleURL", "cardFuncs": ["ragemana"]},
-    {"name":"Skill Mana", "type":"skill", "cost":null, "desc":"A true display of skill.", "img_url":"exampleURL", "cardFuncs": ["skillmana"]},
-    {"name":"Arcana Mana", "type":"arcana", "cost":null, "desc":"Pure arcane power.", "img_url":"exampleURL", "cardFuncs": ["arcanamana"]},
-    {"name":"Divine Mana", "type":"divine", "cost":null, "desc":"Might from the gods above.", "img_url":"exampleURL", "cardFuncs": ["divinemana"]},
     {"name":"Goblin", "type":"null", "cost":1, "desc":"Small, green, and mean. The perfect henchman.", "img_url":"exampleURL", "cardFuncs": [], "atk": 1, "def": 1},
     {"name":"Town Guard", "type":"null", "cost":1, "desc":"Whats all this then?", "img_url":"exampleURL", "cardFuncs": [], "atk": 1, "def": 2},
-    {"name":"Village Drunk", "type":"null", "cost":1, "desc":"Why dont you come and say that to my face!", "img_url":"exampleURL", "cardFuncs": ["taunt"], "atk": 1, "def": 1},
+    {"name":"Village Drunk", "type":"null", "cost":1, "desc":"Why dont you come and say that to my face!", "img_url":"exampleURL", "cardFuncs": ["dmg1"], "atk": 1, "def": 1},
     {"name":"Fruit Seller","type":"null", "cost":1, "desc":"Fruits for sale! Fresh fruits for sale!", "img_url":"exampleURL","cardFuncs":["heal1"],"atk": 0,"def":1},
     {"name":"Orc Taskmaster","type":"rage","cost":2, "desc":"Thats one painful looking whip...", "img_url":"exampleURL","cardFuncs":[],"atk": 2,"def":2},
     {"name":"Wildwood Ranger","type":"skill","cost":2, "desc":"I am the guardian of this wood. Leave here at once.", "img_url":"exampleURL","cardFuncs":["camo"],"atk": 2,"def":1},

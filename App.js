@@ -1,7 +1,7 @@
 import React,{ useContext } from 'react';
 import GamePlace from './Components/GamePlace/GamePlace'
 import { View, Text } from 'react-native'
-import Context, { defaultContext } from './contexts/context'
+import Context, { defaultContext } from './contexts/reducer'
 import { registerRootComponent } from 'expo'
 import ignoreWarnings from 'react-native-ignore-warnings'
 
@@ -24,10 +24,9 @@ export default function App() {
   //   </Context.Provider>
   // )
   return(
-    <Context.Provider value={defaultContext}>
-      <GamePlace/>
-    </Context.Provider>
-    
+    // <Context.Provider value={defaultContext}>
+    <GamePlace/>
+    // </Context.Provider>
   )
 }
 registerRootComponent(App)

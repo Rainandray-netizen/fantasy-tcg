@@ -1,4 +1,4 @@
-import {StyleSheet,Dimensions} from 'react-native'
+import {StyleSheet} from 'react-native'
 import dims from '@constants/layout'
 
 const {height, width} = dims
@@ -11,6 +11,10 @@ const PlayerHandStyles = StyleSheet.create({
     width: width*.8,
     height: height*.35,
     backgroundColor: 'green',
+  },
+  hideHand:{
+    display:'none',
+    width: width*0.8
   }
 })
 

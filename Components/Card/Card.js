@@ -11,7 +11,7 @@ const Card = (props) =>{
 
   const {cardInfo} = props
 
-  console.log('da prrops', props)
+  // console.log('da prrops', props)
   return(
       <View style={CardStyles.cardBody}>
         <View>
