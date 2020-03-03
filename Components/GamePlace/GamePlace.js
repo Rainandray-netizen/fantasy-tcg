@@ -4,7 +4,9 @@ import GameBoard from '@components/GameBoard/GameBoard'
 import {View,Text} from 'react-native'
 import gamePlaceStyles from '@components/GamePlace/GamePlaceStyles'
 import reducer, { initialState } from '../../contexts/reducer'
-import PlayerArea from '@components/PlayerArea/PlayerArea'
+// import PlayerArea from '@components/PlayerArea/PlayerArea'
+import PlayerCorner from '@components/PlayerCorner/PlayerCorner'
+import LeftBar from '@components/LeftBar/LeftBar'
 
 const GamePlace = ()=>{
   const [state, dispatch] = useReducer(reducer, initialState)
@@ -38,7 +40,9 @@ const GamePlace = ()=>{
       </Text>
     {/* //play area goes here */}
       <GameBoard boardState={state} boardDispatch={dispatch}/>
-      <PlayerArea areaState={state} areaDispatch={dispatch}/>
+      {/* <PlayerArea areaState={state} areaDispatch={dispatch}/> */}
+      <LeftBar leftBarState={state} leftBarDispatch={dispatch}/>
+      <PlayerHand cardState={state} cardDispatch={dispatch}/>
     </View>
   )
 }

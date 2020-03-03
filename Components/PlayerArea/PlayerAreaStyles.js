@@ -11,7 +11,17 @@ const PlayerAreaStyles = StyleSheet.create({
     justifyContent:'flex-start',
     position:'absolute',
     bottom:0,
-    left:0
+    left:0,
+  },
+  playerAreaContainerBG:{
+    width,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent:'flex-start',
+    bottom:0,
+    left:0,
+    // zIndex:7,
+    position:'absolute',
 
   }
 })

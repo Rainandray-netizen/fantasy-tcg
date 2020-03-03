@@ -12,6 +12,9 @@ const PlayerCornerStyles = StyleSheet.create({
     height: height*.35,
     width: width*.2,
     backgroundColor:'sienna',
+    // position: 'absolute',
+    // bottom:0,
+    // left:0
   }
 })
 

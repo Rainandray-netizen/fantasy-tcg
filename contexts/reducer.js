@@ -11,6 +11,14 @@ export const initialState = {
   player1CardsOnBoard:[],
   player1HP: 20,
   handShowing: true,
+  player1Mana:1,
+  player1MaxMana:1,
+  player1Turn:true,
+  player2CardsInHand:[],
+  player2CardsOnBoard:[],
+  player2HP:20,
+  player2Mana:0,
+  player2MaxMana:1,
 }
 
 const shuffleDeck = (deck)=>{
@@ -35,6 +43,16 @@ const reducer = (state, action)=>{
   console.log('nextState before changes: ',nextState)
 
   switch(action.type){
+    case 'NEXT_TURN':
+      nextState.player1Turn=!nextState.player1Turn
+      if(nextState.player1Turn&&nextState.player1MaxMana<10){
+        nextState.player1MaxMana++
+        nextState.player1Mana = nextState.player1MaxMana
+      }else{
+        nextState.player2MaxMana++
+        nextState.player2Mana = nextState.player2MaxMana
+      }
+      return nextState
     case 'DRAW_CARDS':
       const { shuffleFirst, draw } = action.payload
 
@@ -45,7 +63,14 @@ const reducer = (state, action)=>{
 
       console.log("DRAWING CARDS")
       for(let c = 0;c < draw;c++){
-        nextState.contextCardsInHand.push(nextState.player1Deck.pop())
+        if(nextState.player1Deck.length>0 && nextState.contextCardsInHand.length<9){
+          console.log('card drawn')
+          nextState.contextCardsInHand.push(nextState.player1Deck.pop())
+        }else if(nextState.player1Deck.length===0){
+          console.log('no cards left in deck')
+        }else if(nextState.contextCardsInHand.length>=9){
+          console.log('maximum hand size is 8')
+        }
         // return defaultContext.player1Deck.map(card=>card)
       }
 

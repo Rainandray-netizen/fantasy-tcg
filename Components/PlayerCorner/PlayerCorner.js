@@ -10,7 +10,12 @@ const PlayerCorner = (props) => {
   return(
     <View style={PlayerCornerStyles.cornerContainer}>
       <Text>
-        I'm the corner
+        HP: {cornerState.player1Turn ? cornerState.player1HP : cornerState.player2HP}
+      </Text>
+      <Text>
+        Mana: {cornerState.player1Turn ? 
+        `${cornerState.player1Mana}/${cornerState.player1MaxMana}` : 
+        `${cornerState.player2Mana}/${cornerState.player2MaxMana}`}
       </Text>
     <HandToggle handToggleState={cornerState} handToggleDispatch={cornerDispatch}/>
     </View>

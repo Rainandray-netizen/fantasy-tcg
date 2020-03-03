@@ -11,10 +11,13 @@ const PlayerHandStyles = StyleSheet.create({
     width: width*.8,
     height: height*.35,
     backgroundColor: 'green',
+    position:'absolute',
+    bottom:0,
+    right:0
   },
   hideHand:{
     display:'none',
-    width: width*0.8
+    width: width*0.8,
   }
 })
 

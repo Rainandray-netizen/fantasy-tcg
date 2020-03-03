@@ -55,7 +55,7 @@ const PlayerHand = (props) => {
               }
             }}
           >
-           <Card key={index} cardInfo={cardState.cardDataBase[value]} /> 
+           <Card key={uuidv4()} cardInfo={cardState.cardDataBase[value]} /> 
           </Draggable>
         ))}
       </View>

@@ -8,7 +8,7 @@ const gamePlaceStyles = StyleSheet.create({
     display:'flex',
     flexDirection:'column',
     justifyContent:'space-between',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     height: height,
     width: width,
     backgroundColor: 'blue',
